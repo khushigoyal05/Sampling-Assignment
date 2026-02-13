@@ -4,26 +4,26 @@
 **University:** Thapar Institute of Engineering & Technology  
 
 ## 📌 Project Overview
-[cite_start]This project addresses the challenge of working with a highly imbalanced credit card dataset[cite: 11]. [cite_start]Real-world fraud detection datasets often contain very few fraud instances compared to legitimate transactions, which can significantly skew model performance[cite: 11]. 
+This project addresses the challenge of working with a highly imbalanced credit card dataset. Real-world fraud detection datasets often contain very few fraud instances compared to legitimate transactions, which can significantly skew model performance. 
 
 The objective of this assignment is to:
-1. [cite_start]Balance the dataset using oversampling[cite: 12, 17].
-2. [cite_start]Apply five distinct sampling techniques to the balanced data[cite: 18, 19].
-3. [cite_start]Evaluate the performance of five different machine learning models across these samples[cite: 20].
-4. [cite_start]Identify which sampling technique provides the highest accuracy for each model[cite: 22].
+1. Balance the dataset using oversampling.
+2. Apply five distinct sampling techniques to the balanced data.
+3. Evaluate the performance of five different machine learning models across these samples.
+4. Identify which sampling technique provides the highest accuracy for each model.
 
 ## 🛠️ Methodology
 
 ### 1. Data Balancing
-The original dataset was highly imbalanced (763 legitimate cases vs. 9 fraud cases). I utilized the `RandomOverSampler` to balance the classes, resulting in a dataset with an equal distribution (763:763).
+The original dataset was highly imbalanced (763 legitimate cases vs. 9 fraud cases). I utilized the `RandomOverSampler` to balance the classes, resulting in a dataset with an equal distribution (763 cases of class 0 and 763 cases of class 1).
 
 ### 2. Sampling Techniques
 Five samples (S1-S5) were generated with a target size determined by the formula for finite populations:
 * **Sampling 1: Simple Random Sampling** - Every element has an equal chance of being selected.
-* **Sampling 2: Systematic Sampling** - Elements selected at fixed intervals ($k$) after a random start.
+* **Sampling 2: Systematic Sampling** - Elements selected at fixed intervals after a random start.
 * **Sampling 3: Stratified Sampling** - Ensures equal representation of both classes in each sample.
 * **Sampling 4: Cluster Sampling** - Dividing the population into clusters and randomly selecting entire clusters.
-* **Sampling 5: Bootstrap Sampling** - Random sampling with replacement.
+* **Sampling 5: Bootstrap Sampling** - Random sampling with replacement (Bagging).
 
 ### 3. Machine Learning Models
 The following models were trained on each of the five samples:
